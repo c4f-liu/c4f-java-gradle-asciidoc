@@ -1,0 +1,31 @@
+#
+# 重载 https://github.com/asciidoctor/asciidoctor-pdf/blob/master/data/themes/default-theme.yml
+# 使用中文字体解决 pdf 乱码问题
+#
+
+extends: default
+
+# 重载字体定义
+font:
+    catalog:
+        Roboto Mono:
+            normal: RobotoMono-Regular.ttf
+            bold: RobotoMono-Bold.ttf
+            italic: RobotoMono-Italic.ttf
+            bold_italic: RobotoMono-BoldItalic.ttf
+        SourceHanSerifCN:
+            normal: SourceHanSerifCN-Regular.ttf
+            bold: SourceHanSerifCN-Bold.ttf
+            italic: SourceHanSerifCN-Regular.ttf
+            bold_italic: SourceHanSerifCN-Bold.ttf
+    fallbacks:
+        - SourceHanSerifCN
+
+# 覆盖基础字体
+base:
+    font_family: SourceHanSerifCN
+    font_size: 12
+
+# 覆盖等宽字体
+literal:
+    font_family: Roboto Mono
